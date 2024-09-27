@@ -5,6 +5,8 @@ import type {
   CellFailureProps,
   TypedDocumentNode,
 } from '@redwoodjs/web'
+import { Link, routes } from '@redwoodjs/router'
+import Article from '../Article/Article'
 
 export const QUERY: TypedDocumentNode<ArticlesQuery, ArticlesQueryVariables> =
   gql`
@@ -30,11 +32,7 @@ export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
   return (
     <>
       {articles.map((item) => {
-        return <div>
-          <h1>{item.title}</h1>
-          <p>{item.body}</p>
-          <pre>{item.createdAt}</pre>
-        </div>
+        return <Article article={item} />
       })}
     </>
   )
