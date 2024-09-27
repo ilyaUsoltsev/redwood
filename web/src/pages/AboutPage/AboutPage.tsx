@@ -2,14 +2,13 @@
 import { Link, routes } from '@redwoodjs/router'
 import { Metadata } from '@redwoodjs/web'
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <>
-      <Metadata title="Home" description="Home page" />
-
-      <p>Home page</p>
+      <Metadata title="About" description="About page" />
+      <p>About page</p>
     </>
   )
 }
 
-export default HomePage
+export default AboutPage
