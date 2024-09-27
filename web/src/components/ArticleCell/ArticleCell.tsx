@@ -16,6 +16,7 @@ export const QUERY: TypedDocumentNode<
       id
       title
       body
+      createdAt
     }
   }
 `
