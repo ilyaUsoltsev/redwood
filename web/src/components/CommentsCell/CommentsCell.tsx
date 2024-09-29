@@ -4,8 +4,8 @@ import type { CommentsQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 export const QUERY = gql`
-  query CommentsQuery {
-    comments {
+  query CommentsQuery($postId: Int!) {
+    comments(postId: $postId) {
       id
       name
       body
